@@ -1,151 +1,74 @@
+<h1 align="center">
+  ⚡ KALKI ⚔️ — Your Cybersecurity AI Assistant
+</h1>
 
-Kalki: My Cybersecurity Assistant
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&pause=1000&center=true&vCenter=true&width=435&lines=KALKI+AI+Cybersecurity+Assistant;Builds+Tools+from+Voice+Commands;Web+Dev+%7C+Code+%7C+AI+%7C+Scanner;OpenAI+%2B+Python+%2B+Nmap+%2B+Shodan" alt="Typing SVG" />
+</p>
 
-Kalki is a voice-activated cybersecurity assistant that can assist users in various cybersecurity-related tasks such as explaining vulnerabilities, suggesting tools, performing basic network tests, and more. The assistant is designed to interact using both English and Hindi languages, with speech recognition and text-to-speech capabilities.
 
-Table of Contents
-- Introduction
-- Features
-- Requirements
-- Installation
-- Usage
-  - Commands
-  - Languages Supported
-- Customization
-- Future Improvements
-- License
 
-Introduction
+---
 
-Kalki is a speech-driven assistant that leverages Python libraries such as `speech_recognition`, `pyttsx3`, `gTTS`, and OpenAI's API to provide information on cybersecurity tools, vulnerabilities, and tips. It is capable of recognizing voice commands in English and Hindi, querying the OpenAI API for responses, and performing actions like running a basic `nmap` scan.
+## 📖 What is Kalki?
 
-Features
+> **Kalki** is an advanced, AI-powered cybersecurity virtual assistant that talks to you, understands your voice, helps with security testing, builds code, fixes tools, and even talks back using human-like voice. 🧠🎤💻
 
-- Speech Recognition: Kalki can listen to voice commands in both English and Hindi.
-- Text-to-Speech: Responses are spoken aloud in the specified language.
-- Cybersecurity Tool Descriptions: Provides descriptions of popular tools like Nmap, Metasploit, Burp Suite, and Wireshark.
-- Vulnerability Information: Explains common vulnerabilities such as SQL Injection and Cross-Site Scripting (XSS).
-- Basic Network Scanning: Can run basic `nmap` scans as part of the demo.
-- Cybersecurity Tips: Recites a random cybersecurity tip to improve the user's security awareness.
-- OpenAI Integration: Queries OpenAI for additional answers related to cybersecurity or other topics.
+It’s designed to help developers, cybersecurity analysts, and ethical hackers automate tasks by just **speaking**.
 
-Requirements
+---
 
-The following Python libraries are required for Kalki to function:
+## ⚙️ What Can Kalki Do?
 
-- `speech_recognition`: For listening to voice commands.
-- `pyttsx3`: For English text-to-speech (TTS) functionality.
-- `gTTS`: For Hindi text-to-speech functionality.
-- `openai`: To integrate with OpenAI for generating responses.
-- `os`: To execute system commands and manage file system interactions.
-- `random`: To generate random cybersecurity tips.
+| 🎯 Feature | ✅ Description |
+|-----------|----------------|
+| 🔐 Cybersecurity Tools | Explains and runs tools like Nmap, Metasploit, Burp Suite, etc. |
+| 🦠 CVE & Vulnerability Info | Explains top vulnerabilities like SQLi, XSS, and more |
+| 🧠 AI Chat | Uses OpenAI to answer technical queries smartly |
+| 🧑‍💻 Code Generation | Creates Python, Java, HTML/CSS/JS, C, and C++ code from voice prompts |
+| 🔧 Tool Repair | Repairs/rewrites broken code/tools based on your voice description |
+| 🌐 Network Scans | DNS Lookup, IP resolver, port scanning using Nmap |
+| 📊 GUI Reports | Visualizes scan reports using Streamlit or GUI modules |
+| 💬 Hindi + English | Understands and replies in both Hindi and English |
+| 🧵 Discord Integration | Sends alerts, scans, or logs to your Discord server |
+| 🔍 Shodan, VirusTotal, OTX | Integrates with top threat intelligence APIs |
+| 🔄 Realtime Logs | Keeps logs of activity with timestamps |
+| 📁 Auto Save | Saves generated code in files with proper naming |
 
-Additionally, you'll need:
-- OpenAI API Key: Replace the placeholder in the code (`openai.api_key`) with your actual API key.
-- mpg321: Required for playing `.mp3` files when using Hindi TTS (can be installed using a package manager like `apt` on Linux).
+---
 
-Installation
+## 🛠 Tech Stack
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/Kalki-Cybersecurity-Assistant.git
-   cd Kalki-Cybersecurity-Assistant
-   ```
+- 🧠 OpenAI GPT-4
+- 🎤 SpeechRecognition
+- 🔊 pyttsx3 + gTTS
+- 🌐 Nmap (via `os.system`)
+- 🧰 Python subprocess
+- 🧪 Streamlit (for GUI reports)
+- 📡 Shodan API, VirusTotal API, OTX AlienVault API
+- 📦 Discord Webhooks
 
-2. Install the required Python packages:
-   ```bash
-   pip install speechrecognition pyttsx3 gtts openai
-   ```
+---
 
-3. Install additional dependencies:
-   For playing audio files (Hindi TTS):
-   ```bash
-   sudo apt install mpg321
-   ```
-
-4. Set up OpenAI API Key:
-   Open the script file and replace `openai.api_key = 'your-api-key'` with your actual OpenAI API key.
-
-Usage
-
-To run Kalki, execute the Python script:
+## 🖥 Installation & Setup
 
 ```bash
-python kalki_cybersecurity_assistant.py
-```
+# 1. Clone the repo
+git clone https://github.com/AkarshYash/Kalki-My-Cyber-Virtual-Assistant.git
+cd Kalki-My-Cyber-Virtual-Assistant
 
-Commands
+# 2. Create virtual env (optional but recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-Here are some example commands you can give to Kalki:
+# 3. Install requirements
+pip install -r requirements.txt
 
-- Help Command:
-  - Help me with cybersecurity tools
-  - Help me understand vulnerabilities
-  
-- Tool Information:
-  - Tell me about Nmap
-  - What is Metasploit?
-  
-- Vulnerability Information:
-  - Explain SQL Injection
-  - What is Cross-Site Scripting?
+# 4. Set your API keys
+# Replace 'your-openai-key' and others in kalki.py
 
-- Run a Basic Nmap Scan:
-  - Run Nmap on my network
+# 5. Run it!
+python Kalki.py
 
-- Cybersecurity Tips:
-  - The assistant will automatically provide random tips on starting.
 
-Languages Supported
-
-Kalki supports two languages:
-- English: Default language.
-- Hindi: To switch to Hindi, say "Hindi" or "हिंदी" when prompted.
-
-Commands are processed in the language you choose, and responses are provided accordingly.
-
-Exiting the Program
-
-To exit the program, you can use any of the following commands:
-- exit
-- goodbye
-- stop
-- alvida
-
-Customization
-
-You can easily expand the functionality of Kalki by adding more cybersecurity tools or vulnerabilities to the existing lists in the script. Here's how:
-
-1. Adding Tools:
-   Open the script and modify the `cyber_security_tools` dictionary:
-   ```python
-   cyber_security_tools = {
-       "nmap": "Nmap is a network scanning tool...",
-       "new_tool": "Description of the new tool..."
-   }
-   ```
-
-2. Adding Vulnerabilities:
-   Similarly, you can add more vulnerabilities to the `vulnerabilities` dictionary:
-   ```python
-   vulnerabilities = {
-       "sql injection": "SQL injection is...",
-       "new_vulnerability": "Description of the new vulnerability..."
-   }
-   ```
-
-3. Customizing Commands:
-   Add more functionality by modifying the `process_command()` function to include new actions based on user commands.
-
-Future Improvements
-
-Some future improvements that can be added:
-- Advanced Scanning: Integrating more advanced security tools (e.g., running Metasploit modules or OWASP ZAP).
-- Natural Language Processing: Enhance command recognition to support more natural queries and follow-up questions.
-- Machine Learning Models: Integrate local machine learning models for offline use or expand response generation with cybersecurity-specific models.
-- Interactive Reports: Generate more detailed vulnerability reports or logs based on network scans.
-
-License
-
-This project is licensed under the MIT License. Feel free to use, modify, and distribute as per the terms of the license.
 
